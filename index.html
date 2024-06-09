@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S24</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/RGBELoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/pmrem/PMREMGenerator.js"></script>
+   
+
+    <link rel="stylesheet" href="style/style.css">
+   
+</head>
+<body>
+    <header>
+        <div id="logo"><img src="img/Samsung_logo.jpg" alt="samsung_logo"></div>
+        <div id="nav_container">
+            <nav id="nav_left">
+                <a href="#" class="button">Sklep</a>
+                <a href="#" class="button">AI</a>
+                <a href="#" class="button">Urządzenia mobilne</a>
+                <a href="#" class="button">TV & AV</a>
+                <a href="#" class="button">Urządzenia AGD</a>
+                <a href="#" class="button">IT</a>
+            </nav>
+            <nav id="nav_right">
+                <a href="#" class="button">SmartThings</a>
+                <a href="#" class="button">Wsparcie</a>
+                <div style="margin-left: 50px;">
+                <a href="#"><img src="img/search.png" alt="szukaj" style=" width: auto; height: 25px; margin-top: 3px;padding-left: 10px; padding-right: 10px;"></a>
+                <a href="#"><img src="img/cart.png" alt="koszyk" style="height: 32px; padding-left: 10px; padding-right: 10px;"></a>
+                <a href="#"><img src="img/user.png" alt="urzytkownik" style="height: 28px; margin-top: 3px; padding-left: 10px; padding-right: 10px; "></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <h2 style="text-align: center;">Galaxy AI✨ już tu jest </h2>
+        <p style="text-align: center;">Odkryj nowy poziom innowacji z najnowszym smartfonem Samsung Galaxy S24.</p>
+        <div id="color_menu">
+           <b >Kolor </b><br>
+           Wybierz kolor urządzenia <br>
+           <div id="panel3d">
+            <script src="js/app.js"></script>
+           </div>
+           <div id="control_panel">
+            <div id="option">
+            <label class="color-option">
+                <input type="radio" name="color" value="niebieski"  checked>
+                <div class="color-label" style="background-color: #29aaf5;"></div>
+                <span>Niebieski</span>
+            </label>
+            <label class="color-option">
+                <input type="radio" name="color" value="czerwony" >
+                <div class="color-label" style="background-color: #e61c1c;"></div>
+                <span>Czerwony</span>
+            </label>
+            <label class="color-option">
+                <input type="radio" name="color" value="czarny">
+                <div class="color-label" style="background-color: #000000;"></div>
+                <span>Czarny</span>
+            </label>
+            <label class="color-option">
+                <input type="radio" name="color" value="szary">
+                <div class="color-label" style="background-color: #C0C0C0;"></div>
+                <span>Szary</span>
+            </label>
+            </div>
+           </div>
+           
+        
+        </div>
+    </section>
+    <script>
+        
+        document.querySelectorAll('input[name="color"]').forEach((input) => {
+            input.addEventListener('change', function(event) {
+                loadModel(event.target.value);
+            });
+        });
+   
+    </script>
+</body>
+</html>
